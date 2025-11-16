@@ -1,0 +1,14 @@
+name: Files
+
+on: workflow_dispatch
+
+jobs:
+  File:
+    runs-on: ubuntu-latest
+    steps:
+      - name: directory aanmaken
+        run: mkdir "map"
+      - name: bestand in map zetten
+        run: echo "hallo dit is korte tekst" > map/tekst.txt
+      - name: bestand uitlezen
+        run: cat map/tekst.txt
